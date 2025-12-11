@@ -1,0 +1,25 @@
+#rouletteContainer {
+	text-align: center;
+	padding-top: 50px;
+}
+
+#nameDisplay {
+	font-size: 2.5em;
+	height: 2em;
+	margin-bottom: 20px;
+}
+
+button {
+	padding: 10px 20px;
+	font-size: 16px;
+	color: white;
+	background-color: blueviolet;
+	border: none;
+	border-radius: 5px;
+	cursor: pointer;
+	outline: none;
+}
+
+button:hover {
+	background-color: #218838;
+}
