@@ -1,22 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Disney Character Matcher</title>
+  <link rel="stylesheet" href="./style.css" />
+</head>
+<body>
+  <main class="app">
+    <h1>✨ Disney Character Matcher ✨</h1>
+    <p class="subtitle">Tap the button to get matched with a random Disney character!</p>
 
-  <head>
-    <meta charset="UTF-8">
-    <title>Who&#39;s next? - MSTU5013 003</title>
-    <link rel="stylesheet" href="./style.css">
+    <section class="card" aria-live="polite">
+      <div class="avatar" id="characterAvatar">🎬</div>
+      <h2 id="characterName">Ready to find your match?</h2>
+      <p id="characterDescription">Click <strong>Match Me</strong> to reveal your Disney character.</p>
+      <button id="matchButton">Match Me</button>
+    </section>
+  </main>
 
-  </head>
-    
-  <body>
-  <div id="rouletteContainer">
-	<p id="nameDisplay">Click to spin!</p>
-	<button id="spinButton">Who's next?</button>
-</div>
-
-<audio id = "clickSound" src="https://github.com/sourgummiunicorn/sotrage/blob/main/squidgame.wav?raw=1"></audio>
-    <script  src="./script.js"></script>
-
-  </body>
-  
+  <script src="./script.js"></script>
+</body>
 </html>
