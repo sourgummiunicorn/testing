@@ -1,22 +1,42 @@
 <!DOCTYPE html>
 <html lang="en">
-
   <head>
-    <meta charset="UTF-8">
-    <title>Who&#39;s next? - MSTU5013 003</title>
-    <link rel="stylesheet" href="./style.css">
-
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Who's next? - MSTU5013 003</title>
+    <link rel="stylesheet" href="./style.css" />
   </head>
-    
+
   <body>
-  <div id="rouletteContainer">
-	<p id="nameDisplay">Click to spin!</p>
-	<button id="spinButton">Who's next?</button>
-</div>
+    <main class="app-shell">
+      <section id="rouletteContainer" class="panel">
+        <h1>Who's Next?</h1>
+        <p class="subtext">Spin the picker to select a speaker at random.</p>
 
-<audio id = "clickSound" src="https://github.com/sourgummiunicorn/sotrage/blob/main/squidgame.wav?raw=1"></audio>
-    <script  src="./script.js"></script>
+        <p id="nameDisplay" aria-live="polite">Ready to spin</p>
 
+        <div class="controls">
+          <button id="spinButton" type="button">Spin Roulette</button>
+          <p id="participantCount" class="meta"></p>
+        </div>
+
+        <div id="finalResult" class="result" hidden>
+          <span class="result-label">Selected:</span>
+          <strong id="resultName">—</strong>
+        </div>
+
+        <div class="history-wrap">
+          <h2>Recent picks</h2>
+          <ul id="historyList"></ul>
+        </div>
+      </section>
+    </main>
+
+    <audio
+      id="clickSound"
+      src="https://github.com/sourgummiunicorn/sotrage/blob/main/squidgame.wav?raw=1"
+      preload="auto"
+    ></audio>
+    <script src="./script.js"></script>
   </body>
-  
 </html>
