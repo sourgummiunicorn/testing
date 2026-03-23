@@ -1,22 +1,72 @@
 <!DOCTYPE html>
 <html lang="en">
-
   <head>
-    <meta charset="UTF-8">
-    <title>Who&#39;s next? - MSTU5013 003</title>
-    <link rel="stylesheet" href="./style.css">
-
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Purple & Pink Tic-Tac-Toe</title>
+    <link rel="stylesheet" href="./style.css" />
   </head>
-    
   <body>
-  <div id="rouletteContainer">
-	<p id="nameDisplay">Click to spin!</p>
-	<button id="spinButton">Who's next?</button>
-</div>
+    <main class="app-shell">
+      <section class="game-card" aria-labelledby="game-title">
+        <div class="game-copy">
+          <p class="eyebrow">Two-player game</p>
+          <h1 id="game-title">Tic-Tac-Toe</h1>
+          <p class="subtitle">
+            A playful head-to-head board with a purple and pink glow.
+          </p>
+        </div>
 
-<audio id = "clickSound" src="https://github.com/sourgummiunicorn/sotrage/blob/main/squidgame.wav?raw=1"></audio>
-    <script  src="./script.js"></script>
+        <div class="status-panel">
+          <div class="player-chip player-x">
+            <span class="chip-label">Player 1</span>
+            <strong>X</strong>
+          </div>
+          <p id="statusMessage" class="status-message" aria-live="polite">
+            Player 1's turn (X)
+          </p>
+          <div class="player-chip player-o">
+            <span class="chip-label">Player 2</span>
+            <strong>O</strong>
+          </div>
+        </div>
 
+        <div class="scoreboard" aria-label="Scoreboard">
+          <article>
+            <span>Player 1</span>
+            <strong id="scoreX">0</strong>
+          </article>
+          <article>
+            <span>Draws</span>
+            <strong id="scoreDraws">0</strong>
+          </article>
+          <article>
+            <span>Player 2</span>
+            <strong id="scoreO">0</strong>
+          </article>
+        </div>
+
+        <section class="board" id="board" aria-label="Tic-Tac-Toe board">
+          <button class="cell" data-cell-index="0" aria-label="Cell 1"></button>
+          <button class="cell" data-cell-index="1" aria-label="Cell 2"></button>
+          <button class="cell" data-cell-index="2" aria-label="Cell 3"></button>
+          <button class="cell" data-cell-index="3" aria-label="Cell 4"></button>
+          <button class="cell" data-cell-index="4" aria-label="Cell 5"></button>
+          <button class="cell" data-cell-index="5" aria-label="Cell 6"></button>
+          <button class="cell" data-cell-index="6" aria-label="Cell 7"></button>
+          <button class="cell" data-cell-index="7" aria-label="Cell 8"></button>
+          <button class="cell" data-cell-index="8" aria-label="Cell 9"></button>
+        </section>
+
+        <div class="actions">
+          <button id="resetBoardButton" class="action-button">Reset Board</button>
+          <button id="newMatchButton" class="action-button secondary">
+            New Match
+          </button>
+        </div>
+      </section>
+    </main>
+
+    <script src="./script.js"></script>
   </body>
-  
 </html>
